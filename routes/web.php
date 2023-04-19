@@ -3,6 +3,7 @@
 use App\Http\Controllers\Moderator\CategoryiesController;
 use App\Http\Controllers\Moderator\CommentsController;
 use App\Http\Controllers\Moderator\GenreiesController;
+use App\Http\Controllers\ConfigController;
 use App\Http\Controllers\Moderator\UsersController;
 use App\Http\Controllers\Moderator\VideolarController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\Admin\GenresController;
 use App\Http\Controllers\Admin\VideosController;
 
+Route::get('/config',[ConfigController::class,'index']);
 
 Route::middleware('auth')->group(function (){
     Route::get('/',function (){
